@@ -1,4 +1,4 @@
-package br.com.alura.maven.aToolsQA;
+package br.com.rsinet.hub_BDD;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

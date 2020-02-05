@@ -1,7 +1,6 @@
 package br.com.rsinet.hub_TDD.Testes;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 import org.openqa.selenium.WebElement;
 import org.testng.ITestResult;
@@ -15,19 +14,21 @@ import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.hub_TDD.PageObject.Cadastro;
 import br.com.rsinet.hub_TDD.Report.Reports;
+import br.com.rsinet.hub_TDD.Utilitys.AcoesdeTouch;
 import br.com.rsinet.hub_TDD.Utilitys.DriverFactory;
-import br.com.rsinet.hub_TDD.Utilitys.FuncoesDeAcoes;
+import br.com.rsinet.hub_TDD.Utilitys.MassaDados;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.offset.PointOption;
 
 public class TestCadastro {
 
 	private static AndroidDriver<WebElement> driver;
 	private static ExtentReports extent;
 	private static ExtentTest logger;
-	private static FuncoesDeAcoes funt;
+	private static AcoesdeTouch funt;
 	private static TouchAction actions;
+	private static MassaDados dados;
+	private static Cadastro cad;
 
 	@BeforeTest
 	public void IniciaReport() {
@@ -37,67 +38,77 @@ public class TestCadastro {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() throws InterruptedException, MalformedURLException {
-		logger = Reports.createTest("TesteCadastroUsuario");
+	public void beforeMethod() throws Exception {
 		driver = DriverFactory.AberturaAndroid();
-		funt = new FuncoesDeAcoes(driver);
+		funt = new AcoesdeTouch(driver);
+		dados = new MassaDados(driver);
 		actions = new TouchAction(driver);
+		cad = new Cadastro(driver);
 	}
 
 	@Test
-	public void main() throws MalformedURLException, InterruptedException {
+	public void Cadastro1() throws Exception {
+		logger = Reports.createTest("TesteSucessoCadastroUsuario");
 
-		Cadastro.btn_Menu(driver).click();
-		Cadastro.btn_Login(driver).click();
-		Cadastro.btn_criarConta(driver).click();
-		Cadastro.txt_Usuario(driver).click();
-		Cadastro.txt_Usuario(driver).sendKeys("TesteUser212");
-		Cadastro.txt_Email(driver).click();
-		Cadastro.txt_Email(driver).sendKeys("miguel@email.com");
+		cad.apertarMenu();
+		cad.apertarLogin();
+		cad.apertarCriarConta();
+		cad.digitarUsuario(dados.usuario());
+		cad.digitarEmail(dados.email());
+		cad.digitarSenha(dados.senha());
+		cad.confirmaSenha(dados.ConfirmaSenha());
+		cad.digitarNome(dados.PrimeiroNome());
+		cad.digitarUltimoNome(dados.UltimoNome());
+
 		funt.apertarProximo();
+		cad.digitarTelefone(dados.Telefone());
 
-		Cadastro.txt_senha(driver).click();
-		Cadastro.txt_senha(driver).sendKeys("96Miguel.");
-		driver.hideKeyboard();
-
-		Cadastro.txt_ConfSenha(driver).click();
-		Cadastro.txt_ConfSenha(driver).sendKeys("96Miguel.");
-		driver.hideKeyboard();
-
-		Cadastro.txt_PrimeiroNome(driver).click();
-		Cadastro.txt_PrimeiroNome(driver).sendKeys("Miguel");
-
-		Cadastro.txt_UltimoNome(driver).click();
-		Cadastro.txt_UltimoNome(driver).sendKeys("Bruno");
-		funt.apertarProximo();
-
-		Cadastro.txt_Tel(driver).sendKeys("11999999999");
-		funt.apertarProximo();
-
-		Cadastro.cmbx_Pais(driver).click();
+		cad.escolherPais();
 		funt.arrastarTela();
 		funt.arrastarTela();
 
-		Cadastro.brasil(driver).click();
-		Cadastro.txt_Estado(driver).click();
-		Cadastro.txt_Estado(driver).sendKeys("São Paulo");
+		cad.pais();
+		cad.digitarEstado(dados.Estado());
+
+		cad.digitarEndereco(dados.Endereco());
+		cad.digitarCidade(dados.Cidade());
+		cad.digitarCEP(dados.CEP());
+
+		funt.Scroll();
+		cad.confirmaCadastro();
+
+	}
+
+	@Test
+	public void Cadastro2() throws Exception {
+		logger = Reports.createTest("TesteNegativoCadastroUsuario");
+
+		cad.apertarMenu();
+		cad.apertarLogin();
+		cad.apertarCriarConta();
+		cad.digitarUsuario(dados.usuario());
+		cad.digitarEmail(dados.email());
+		cad.digitarSenha(dados.senhaTestNegativo());
+		cad.confirmaSenha(dados.ConfirSenhaTestNegativo());
+		cad.digitarNome(dados.PrimeiroNome());
+		cad.digitarUltimoNome(dados.UltimoNome());
+
 		funt.apertarProximo();
-		driver.hideKeyboard();
+		cad.digitarTelefone(dados.Telefone());
 
-		Cadastro.txt_Endereco(driver).click();
-		Cadastro.txt_Endereco(driver).sendKeys("Rua Tal de Tal");
-		funt.apertarProximo();
+		cad.escolherPais();
+		funt.arrastarTela();
+		funt.arrastarTela();
 
-		Cadastro.txt_Cidade(driver).click();
-		Cadastro.txt_Cidade(driver).sendKeys("Taboão da Serra");
+		cad.pais();
+		cad.digitarEstado(dados.Estado());
 
-		Cadastro.txt_Cep(driver).click();
-		Cadastro.txt_Cep(driver).sendKeys("097654320");
-		driver.hideKeyboard();
+		cad.digitarEndereco(dados.Endereco());
+		cad.digitarCidade(dados.Cidade());
+		cad.digitarCEP(dados.CEP());
 
-		Thread.sleep(3000);
-		actions.press(PointOption.point(484, 1606)).moveTo(PointOption.point(496, 487)).release().perform();
-		Cadastro.btn_Confirma(driver);
+		funt.Scroll();
+		cad.confirmaCadastro();
 
 	}
 
@@ -105,6 +116,6 @@ public class TestCadastro {
 	public void afterMethod(ITestResult result) throws IOException {
 		Reports.statusReported(logger, result, driver);
 		Reports.quitExtent(extent);
-		// driver.quit();
+		DriverFactory.fecharDriver();
 	}
 }

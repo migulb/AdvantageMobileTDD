@@ -6,137 +6,195 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Cadastro {
+
+	private static AndroidDriver<WebElement> driver;
 	private static WebElement element = null;
 
-	public static WebElement btn_Menu(AndroidDriver<WebElement> driver) {
-
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/imageViewMenu"));
-
-		return element;
+	public Cadastro(AndroidDriver<WebElement> driver) {
+		this.driver = driver;
 	}
 
-	public static WebElement btn_Login(AndroidDriver<WebElement> driver) {
+	private WebElement btn_Menu(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser"));
-
-		return element;
+		return driver.findElement(By.id("com.Advantage.aShopping:id/imageViewMenu"));
 	}
 
-	public static WebElement btn_criarConta(AndroidDriver<WebElement> driver) {
+	private WebElement btn_Login(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/textViewDontHaveAnAccount"));
+		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser"));
 
-		return element;
 	}
 
-	public static WebElement txt_Usuario(AndroidDriver<WebElement> driver) {
+	private WebElement btn_criarConta(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
+		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewDontHaveAnAccount"));
+	}
+
+	private WebElement txt_Usuario(AndroidDriver<WebElement> driver) {
+
+		return driver.findElement(By.xpath(
 				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.EditText\r\n"));
 
-		return element;
-
 	}
 
-	public static WebElement txt_Email(AndroidDriver<WebElement> driver) {
+	private WebElement txt_Email(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
+		return driver.findElement(By.xpath(
 				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.EditText"));
-
-		return element;
 	}
 
-	public static WebElement txt_senha(AndroidDriver<WebElement> driver) {
+	private WebElement txt_senha(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
+		return driver.findElement(By.xpath(
 				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.EditText"));
 
-		return element;
 	}
 
-	public static WebElement txt_ConfSenha(AndroidDriver<WebElement> driver) {
-		element = driver.findElement(By.xpath(
+	private WebElement txt_ConfSenha(AndroidDriver<WebElement> driver) {
+		return driver.findElement(By.xpath(
 				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.RelativeLayout/android.widget.EditText"));
-
-		return element;
 	}
 
-	public static WebElement txt_PrimeiroNome(AndroidDriver<WebElement> driver) {
+	private WebElement txt_PrimeiroNome(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
+		return driver.findElement(By.xpath(
 				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.EditText"));
-
-		return element;
 	}
 
-	public static WebElement txt_UltimoNome(AndroidDriver<WebElement> driver) {
+	private WebElement txt_UltimoNome(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
+		return driver.findElement(By.xpath(
 				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.EditText"));
-
-		return element;
 	}
 
-	public static WebElement txt_Tel(AndroidDriver<WebElement> driver) {
+	private WebElement txt_Tel(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
+		return driver.findElement(By.xpath(
 				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.EditText"));
-
-		return element;
 	}
 
-	public static WebElement txt_Estado(AndroidDriver<WebElement> driver) {
+	private WebElement txt_Estado(AndroidDriver<WebElement> driver) {
 
-		element = driver
+		return driver
 				.findElement(By.xpath("//*[@resource-id='com.Advantage.aShopping:id/AosEditTextState']/child::*[1]"));
-
-		return element;
 	}
 
-	public static WebElement cmbx_Pais(AndroidDriver<WebElement> driver) {
+	private WebElement cmbx_Pais(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/textViewCountries"));
-		return element;
+		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewCountries"));
 
 	}
 
-	public static WebElement brasil(AndroidDriver<WebElement> driver) {
+	private WebElement pais(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
+		return driver.findElement(By.xpath(
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[12]"));
-
-		return element;
 	}
 
-	public static WebElement txt_Endereco(AndroidDriver<WebElement> driver) {
+	private WebElement txt_Endereco(AndroidDriver<WebElement> driver) {
 
-		element = driver
+		return driver
 				.findElement(By.xpath("//*[@resource-id='com.Advantage.aShopping:id/AosEditTextStreet']/child::*[1]"));
 
-		return element;
 	}
 
-	public static WebElement txt_Cidade(AndroidDriver<WebElement> driver) {
+	private WebElement txt_Cidade(AndroidDriver<WebElement> driver) {
 
-		element = driver
+		return driver
 				.findElement(By.xpath("//*[@resource-id='com.Advantage.aShopping:id/AosEditTextCity']/child::*[1]"));
 
-		return element;
 	}
 
-	public static WebElement txt_Cep(AndroidDriver<WebElement> driver) {
+	private WebElement txt_Cep(AndroidDriver<WebElement> driver) {
 
-		element = driver
+		return driver
 				.findElement(By.xpath("//*[@resource-id='com.Advantage.aShopping:id/AosEditTextZip']/child::*[1]"));
 
-		return element;
+	}
+
+	private WebElement btn_Confirma(AndroidDriver<WebElement> driver) {
+
+		return driver.findElement(By.id("com.Advantage.aShopping:id/buttonRegister"));
 
 	}
 
-	public static WebElement btn_Confirma(AndroidDriver<WebElement> driver) {
-
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/buttonRegister"));
-
-		return element;
+	public void apertarMenu() {
+		btn_Menu(driver).click();
 	}
+
+	public void apertarLogin() {
+		btn_Login(driver).click();
+	}
+
+	public void apertarCriarConta() {
+		btn_criarConta(driver).click();
+	}
+
+	public void digitarUsuario(String usuario) {
+		txt_Usuario(driver).click();
+		txt_Usuario(driver).sendKeys(usuario);
+	}
+
+	public void digitarEmail(String email) {
+		txt_Email(driver).click();
+		txt_Email(driver).sendKeys(email);
+	}
+
+	public void digitarSenha(String senha) {
+		txt_senha(driver).click();
+		txt_senha(driver).sendKeys(senha);
+	}
+
+	public void confirmaSenha(String confiSenha) {
+		txt_ConfSenha(driver).click();
+		txt_ConfSenha(driver).sendKeys(confiSenha);
+	}
+
+	public void digitarNome(String nome) {
+		txt_PrimeiroNome(driver).click();
+		txt_PrimeiroNome(driver).sendKeys(nome);
+	}
+
+	public void digitarUltimoNome(String ultimoNome) {
+		txt_UltimoNome(driver).click();
+		txt_UltimoNome(driver).sendKeys(ultimoNome);
+	}
+
+	public void digitarTelefone(String telefone) {
+		txt_Tel(driver).click();
+		txt_Tel(driver).sendKeys(telefone);
+	}
+
+	public void escolherPais() {
+		cmbx_Pais(driver).click();
+	}
+
+	public void pais() {
+		pais(driver).click();
+	}
+
+	public void digitarEstado(String estado) {
+		txt_Estado(driver).click();
+		txt_Estado(driver).sendKeys(estado);
+	}
+
+	public void digitarEndereco(String endereco) {
+		txt_Endereco(driver).click();
+		txt_Endereco(driver).sendKeys(endereco);
+	}
+
+	public void digitarCidade(String cidade) {
+		txt_Cidade(driver).click();
+		txt_Cidade(driver).sendKeys(cidade);
+	}
+
+	public void digitarCEP(String cep) {
+		txt_Cep(driver).click();
+		txt_Cep(driver).sendKeys(cep);
+	}
+
+	public void confirmaCadastro() {
+		btn_Confirma(driver).click();
+	}
+
 }

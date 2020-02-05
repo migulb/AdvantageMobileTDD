@@ -6,12 +6,12 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class FuncoesDeAcoes {
+public class AcoesdeTouch {
 
 	private static TouchAction actions;
 	private static AndroidDriver<WebElement> driver;
 
-	public FuncoesDeAcoes(AndroidDriver<WebElement> driver) {
+	public AcoesdeTouch(AndroidDriver<WebElement> driver) {
 
 		this.driver = driver;
 		this.actions = new TouchAction(this.driver);
@@ -26,6 +26,10 @@ public class FuncoesDeAcoes {
 
 	public static void apertarProximo() {
 
-		actions.tap(PointOption.point(998, 1713)).perform();
+		actions.press(PointOption.point(487, 1564)).moveTo(PointOption.point(502, 420)).release().perform();
+	}
+
+	public static void Scroll() {
+		actions.press(PointOption.point(405, 1031)).moveTo(PointOption.point(426, 335)).release().perform();
 	}
 }

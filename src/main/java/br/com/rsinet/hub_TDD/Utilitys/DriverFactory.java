@@ -23,6 +23,9 @@ public class DriverFactory {
 			cap.setCapability("platformName", "Android");
 			cap.setCapability("appPackage", "com.Advantage.aShopping");
 			cap.setCapability("appActivity", "com.Advantage.aShopping.SplashActivity");
+			cap.setCapability("unicodeKeyboard", true);
+			cap.setCapability("resetKeyBoard", true);
+
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 			driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 		}
