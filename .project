@@ -22,7 +22,7 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src/main/java/br/com/rsinet/hub_BDD/DadosTeste/DadosTeste.xlsx</name>
+			<name>src/main/java/br/com/rsinet/hub_TDD/DadosTeste/DadosTeste.xlsx</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Documents/DadosTeste.xlsx</locationURI>
 		</link>

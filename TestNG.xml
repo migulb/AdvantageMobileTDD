@@ -3,7 +3,10 @@
 <suite name="Suite" >
 	<test name="Test">
 		<classes>
-			<class name="appium_Package.Appium_TestNG_Sample_One"/>
+			<class name="br.com.rsinet.hub_TDD.Testes.TestCadastro"/>
+			<class name="br.com.rsinet.hub_TDD.Testes.BuscaLupa"/>
+			<class name="br.com.rsinet.hub_TDD.Testes.PaginaInicial"/>
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+ </test>
+</suite>
+		

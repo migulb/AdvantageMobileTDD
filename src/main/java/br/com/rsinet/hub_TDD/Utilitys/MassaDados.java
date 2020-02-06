@@ -61,11 +61,8 @@ public class MassaDados {
 		return ExcelUtil.getCellData(1, Constante.COl_cep);
 	}
 
-	public String senhaTestNegativo() throws Exception {
-		return ExcelUtil.getCellData(2, Constante.Col_senha);
+	public String falhaBuscaHome() throws Exception {
+		return ExcelUtil.getCellData(3, Constante.col_buscafalha);
 	}
 
-	public String ConfirSenhaTestNegativo() throws Exception {
-		return ExcelUtil.getCellData(2, Constante.Col_confSenha);
-	}
 }

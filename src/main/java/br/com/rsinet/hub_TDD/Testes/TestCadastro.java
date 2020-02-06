@@ -2,9 +2,12 @@ package br.com.rsinet.hub_TDD.Testes;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -34,7 +37,6 @@ public class TestCadastro {
 	public void IniciaReport() {
 
 		extent = Reports.setExtent("Cadastro_Report");
-
 	}
 
 	@BeforeMethod
@@ -76,6 +78,11 @@ public class TestCadastro {
 
 		funt.Scroll();
 		cad.confirmaCadastro();
+		cad.apertarMenuAposCadastro();
+
+		String cadastro = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
+
+		Assert.assertTrue(cadastro.contains(dados.usuario()));
 
 	}
 
@@ -88,8 +95,8 @@ public class TestCadastro {
 		cad.apertarCriarConta();
 		cad.digitarUsuario(dados.usuario());
 		cad.digitarEmail(dados.email());
-		cad.digitarSenha(dados.senhaTestNegativo());
-		cad.confirmaSenha(dados.ConfirSenhaTestNegativo());
+		cad.digitarSenha(dados.senha());
+		cad.confirmaSenha(dados.ConfirmaSenha());
 		cad.digitarNome(dados.PrimeiroNome());
 		cad.digitarUltimoNome(dados.UltimoNome());
 
@@ -109,13 +116,22 @@ public class TestCadastro {
 
 		funt.Scroll();
 		cad.confirmaCadastro();
+		cad.apertarMenuAposCadastro();
+		String login = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
+		System.out.println(login);
+		Assert.assertTrue(login.contains("LOGIN"));
 
 	}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException {
 		Reports.statusReported(logger, result, driver);
-		Reports.quitExtent(extent);
 		DriverFactory.fecharDriver();
+	}
+
+	@AfterTest
+	public void finalizaReport() {
+		Reports.quitExtent(extent);
+
 	}
 }

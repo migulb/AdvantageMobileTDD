@@ -17,7 +17,8 @@ public class Reports {
 	public static ExtentReports extent;
 	public static ExtentTest test;
 
-	// Gera o nome do Report a localização que será salvo e seta as informações do
+	// Gera o nome do Report a localização que será salvo e seta as informações
+	// do
 	// mesmo//
 	public static ExtentReports setExtent(String nomeReport) {
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "./Reports/" + nomeReport + ".html");
@@ -63,7 +64,7 @@ public class Reports {
 		}
 	}
 
-	// finaliza o teste
+	// finaliza o report
 	public static void quitExtent(ExtentReports extent) {
 		extent.flush();
 	}

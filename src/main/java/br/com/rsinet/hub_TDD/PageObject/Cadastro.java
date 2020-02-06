@@ -2,21 +2,33 @@ package br.com.rsinet.hub_TDD.PageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.android.AndroidDriver;
 
 public class Cadastro {
 
+	private static WebDriverWait wait;
 	private static AndroidDriver<WebElement> driver;
 	private static WebElement element = null;
 
 	public Cadastro(AndroidDriver<WebElement> driver) {
+
 		this.driver = driver;
+		wait = new WebDriverWait(driver, 10);
 	}
 
 	private WebElement btn_Menu(AndroidDriver<WebElement> driver) {
 
 		return driver.findElement(By.id("com.Advantage.aShopping:id/imageViewMenu"));
+	}
+
+	private WebElement btn_MenuAfter(AndroidDriver<WebElement> driver) {
+		element = wait
+				.until(ExpectedConditions.elementToBeClickable(By.id("com.Advantage.aShopping:id/imageViewMenu")));
+
+		return element;
 	}
 
 	private WebElement btn_Login(AndroidDriver<WebElement> driver) {
@@ -194,7 +206,13 @@ public class Cadastro {
 	}
 
 	public void confirmaCadastro() {
+
 		btn_Confirma(driver).click();
 	}
 
+	public void apertarMenuAposCadastro() {
+		btn_MenuAfter(driver);
+		btn_Menu(driver).click();
+
+	}
 }

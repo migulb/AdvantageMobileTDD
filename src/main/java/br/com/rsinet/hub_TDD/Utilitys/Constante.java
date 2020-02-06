@@ -20,4 +20,5 @@ public class Constante {
 	public static final int Col_busca = 1;
 	public static final int Col_buscaerro = 1;
 	public static final int COl_Urlerro = 1;
+	public static final int col_buscafalha = 0;
 }

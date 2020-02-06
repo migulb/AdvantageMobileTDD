@@ -1,55 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-05T14:24:25 BRT" name="Default suite" finished-at="2020-02-05T14:26:15 BRT" duration-ms="109823">
+  <suite started-at="2020-02-06T15:46:47 BRT" name="Suite" finished-at="2020-02-06T15:49:29 BRT" duration-ms="161653">
     <groups>
     </groups>
-    <test started-at="2020-02-05T14:24:25 BRT" name="Default test" finished-at="2020-02-05T14:26:15 BRT" duration-ms="109823">
-      <class name="br.com.rsinet.hub_TDD.Testes.TestCadastro">
-        <test-method is-config="true" signature="IniciaReport()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075]" started-at="2020-02-05T14:24:25 BRT" name="IniciaReport" finished-at="2020-02-05T14:24:25 BRT" duration-ms="124" status="PASS">
+    <test started-at="2020-02-06T15:46:47 BRT" name="Test" finished-at="2020-02-06T15:49:29 BRT" duration-ms="161653">
+      <class name="br.com.rsinet.hub_TDD.Testes.PaginaInicial">
+        <test-method is-config="true" signature="IniciaReport()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:46:47 BRT" name="IniciaReport" finished-at="2020-02-06T15:46:47 BRT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IniciaReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075]" started-at="2020-02-05T14:24:25 BRT" name="beforeMethod" finished-at="2020-02-05T14:24:39 BRT" duration-ms="13931" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:48:45 BRT" name="beforeMethod" finished-at="2020-02-06T15:48:55 BRT" duration-ms="9915" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Cadastro1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075]" started-at="2020-02-05T14:24:39 BRT" name="Cadastro1" finished-at="2020-02-05T14:25:19 BRT" duration-ms="40163" status="PASS">
+        <test-method signature="PaginaInicial1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:48:55 BRT" name="PaginaInicial1" finished-at="2020-02-06T15:49:01 BRT" duration-ms="5803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaginaInicial1 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:49:01 BRT" name="afterMethod" finished-at="2020-02-06T15:49:02 BRT" duration-ms="1204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PaginaInicial1 status=SUCCESS method=PaginaInicial.PaginaInicial1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:49:02 BRT" name="beforeMethod" finished-at="2020-02-06T15:49:12 BRT" duration-ms="9723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="PaginaInicial2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:49:12 BRT" name="PaginaInicial2" finished-at="2020-02-06T15:49:27 BRT" duration-ms="15286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaginaInicial2 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:49:27 BRT" name="afterMethod" finished-at="2020-02-06T15:49:28 BRT" duration-ms="1230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PaginaInicial2 status=SUCCESS method=PaginaInicial.PaginaInicial2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="finalizaReport()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.PaginaInicial@77eca502]" started-at="2020-02-06T15:49:28 BRT" name="finalizaReport" finished-at="2020-02-06T15:49:28 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaReport -->
+      </class> <!-- br.com.rsinet.hub_TDD.Testes.PaginaInicial -->
+      <class name="br.com.rsinet.hub_TDD.Testes.BuscaLupa">
+        <test-method is-config="true" signature="IniciaReport()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:46:47 BRT" name="IniciaReport" finished-at="2020-02-06T15:46:47 BRT" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IniciaReport -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:48:15 BRT" name="beforeMethod" finished-at="2020-02-06T15:48:25 BRT" duration-ms="10143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="BuscaPelaLupa1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:48:25 BRT" name="BuscaPelaLupa1" finished-at="2020-02-06T15:48:29 BRT" duration-ms="4054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BuscaPelaLupa1 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:48:29 BRT" name="afterMethod" finished-at="2020-02-06T15:48:31 BRT" duration-ms="1455" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BuscaPelaLupa1 status=SUCCESS method=BuscaLupa.BuscaPelaLupa1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:48:31 BRT" name="beforeMethod" finished-at="2020-02-06T15:48:41 BRT" duration-ms="10030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="BuscaPelaLupa2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:48:41 BRT" name="BuscaPelaLupa2" finished-at="2020-02-06T15:48:44 BRT" duration-ms="3239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BuscaPelaLupa2 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:48:44 BRT" name="afterMethod" finished-at="2020-02-06T15:48:45 BRT" duration-ms="1004" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BuscaPelaLupa2 status=SUCCESS method=BuscaLupa.BuscaPelaLupa2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="finalizaReport()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.BuscaLupa@7690781]" started-at="2020-02-06T15:49:28 BRT" name="finalizaReport" finished-at="2020-02-06T15:49:28 BRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaReport -->
+      </class> <!-- br.com.rsinet.hub_TDD.Testes.BuscaLupa -->
+      <class name="br.com.rsinet.hub_TDD.Testes.TestCadastro">
+        <test-method is-config="true" signature="IniciaReport()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:46:47 BRT" name="IniciaReport" finished-at="2020-02-06T15:46:47 BRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IniciaReport -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:46:47 BRT" name="beforeMethod" finished-at="2020-02-06T15:46:56 BRT" duration-ms="8386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Cadastro1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:46:56 BRT" name="Cadastro1" finished-at="2020-02-06T15:47:29 BRT" duration-ms="33723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cadastro1 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075]" started-at="2020-02-05T14:25:19 BRT" name="afterMethod" finished-at="2020-02-05T14:25:21 BRT" duration-ms="1886" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:47:29 BRT" name="afterMethod" finished-at="2020-02-06T15:47:31 BRT" duration-ms="1272" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cadastro1 status=SUCCESS method=TestCadastro.Cadastro1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075] output={null}]]]>
+                <![CDATA[[TestResult name=Cadastro1 status=SUCCESS method=TestCadastro.Cadastro1()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075]" started-at="2020-02-05T14:25:21 BRT" name="beforeMethod" finished-at="2020-02-05T14:25:34 BRT" duration-ms="12939" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:47:31 BRT" name="beforeMethod" finished-at="2020-02-06T15:47:40 BRT" duration-ms="9586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Cadastro2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075]" started-at="2020-02-05T14:25:34 BRT" name="Cadastro2" finished-at="2020-02-05T14:26:13 BRT" duration-ms="39341" status="PASS">
+        <test-method signature="Cadastro2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:47:40 BRT" name="Cadastro2" finished-at="2020-02-06T15:48:14 BRT" duration-ms="33891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cadastro2 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075]" started-at="2020-02-05T14:26:13 BRT" name="afterMethod" finished-at="2020-02-05T14:26:15 BRT" duration-ms="1407" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:48:14 BRT" name="afterMethod" finished-at="2020-02-06T15:48:15 BRT" duration-ms="1128" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cadastro2 status=SUCCESS method=TestCadastro.Cadastro2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@2abf4075] output={null}]]]>
+                <![CDATA[[TestResult name=Cadastro2 status=SUCCESS method=TestCadastro.Cadastro2()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="finalizaReport()[pri:0, instance:br.com.rsinet.hub_TDD.Testes.TestCadastro@26275bef]" started-at="2020-02-06T15:49:28 BRT" name="finalizaReport" finished-at="2020-02-06T15:49:29 BRT" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaReport -->
       </class> <!-- br.com.rsinet.hub_TDD.Testes.TestCadastro -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -7,35 +7,50 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class BuscaPelaLupa {
 
+	private static AndroidDriver<WebElement> driver;
 	private static WebElement element = null;
 
-	public static WebElement btn_Lupa(AndroidDriver<WebElement> driver) {
-
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/imageViewSearch"));
-
-		return element;
+	public BuscaPelaLupa(AndroidDriver<WebElement> driver) {
+		this.driver = driver;
 	}
 
-	public static WebElement txt_pesquisa(AndroidDriver<WebElement> driver) {
+	private WebElement btn_Lupa(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/editTextSearch"));
+		return driver.findElement(By.id("com.Advantage.aShopping:id/imageViewSearch"));
 
-		return element;
 	}
 
-	public static WebElement tablet(AndroidDriver<WebElement> driver) {
+	private WebElement txt_pesquisa(AndroidDriver<WebElement> driver) {
 
-		element = driver.findElement(By.xpath(
-				"//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]/android.widget.ImageView"));
+		return driver.findElement(By.id("com.Advantage.aShopping:id/editTextSearch"));
 
-		return element;
 	}
 
-	public static WebElement AddCarrinho(AndroidDriver<WebElement> driver) {
+	private WebElement tablet(AndroidDriver<WebElement> driver) {
+		return driver.findElement(By.id("com.Advantage.aShopping:id/imageViewProduct"));
 
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/buttonProductAddToCart"));
+	}
 
-		return element;
+	private WebElement AddCarrinho(AndroidDriver<WebElement> driver) {
+
+		return driver.findElement(By.id("com.Advantage.aShopping:id/buttonProductAddToCart"));
+
+	}
+
+	public void clicaLupa() {
+		btn_Lupa(driver).click();
+	}
+
+	public void digitaBusca(String busca) {
+		txt_pesquisa(driver).sendKeys(busca);
+	}
+
+	public void clicaTablet() {
+		tablet(driver).click();
+	}
+
+	public void AdicionaCarrinho() {
+		AddCarrinho(driver).click();
 	}
 
 }
