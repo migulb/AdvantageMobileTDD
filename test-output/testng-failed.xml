@@ -3,15 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_TDD.Testes.PaginaInicial">
+      <class name="br.com.rsinet.hub_TDD.Testes.BuscaLupa">
         <methods>
           <include name="afterMethod"/>
-          <include name="PaginaInicial2"/>
-          <include name="finalizaReport"/>
           <include name="IniciaReport"/>
+          <include name="finalizaReport"/>
+          <include name="BuscaPelaLupa1"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_TDD.Testes.PaginaInicial -->
+      </class> <!-- br.com.rsinet.hub_TDD.Testes.BuscaLupa -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

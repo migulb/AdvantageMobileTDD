@@ -36,7 +36,7 @@ public class TestCadastro {
 	@BeforeTest
 	public void IniciaReport() {
 
-		extent = Reports.setExtent("Cadastro_Report");
+		extent = Reports.setExtent("TestGeral");
 	}
 
 	@BeforeMethod
@@ -62,22 +62,16 @@ public class TestCadastro {
 		cad.digitarNome(dados.PrimeiroNome());
 		cad.digitarUltimoNome(dados.UltimoNome());
 
-		funt.apertarProximo();
 		cad.digitarTelefone(dados.Telefone());
 
 		cad.escolherPais();
-		funt.arrastarTela();
-		funt.arrastarTela();
 
-		cad.pais();
 		cad.digitarEstado(dados.Estado());
 
 		cad.digitarEndereco(dados.Endereco());
 		cad.digitarCidade(dados.Cidade());
 		cad.digitarCEP(dados.CEP());
 
-		funt.Scroll();
-		cad.confirmaCadastro();
 		cad.apertarMenuAposCadastro();
 
 		String cadastro = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
@@ -100,22 +94,17 @@ public class TestCadastro {
 		cad.digitarNome(dados.PrimeiroNome());
 		cad.digitarUltimoNome(dados.UltimoNome());
 
-		funt.apertarProximo();
+		AcoesdeTouch.scrollAndClick(driver, "ZIP");
 		cad.digitarTelefone(dados.Telefone());
 
 		cad.escolherPais();
-		funt.arrastarTela();
-		funt.arrastarTela();
 
-		cad.pais();
 		cad.digitarEstado(dados.Estado());
 
 		cad.digitarEndereco(dados.Endereco());
 		cad.digitarCidade(dados.Cidade());
 		cad.digitarCEP(dados.CEP());
 
-		funt.Scroll();
-		cad.confirmaCadastro();
 		cad.apertarMenuAposCadastro();
 		String login = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
 		System.out.println(login);

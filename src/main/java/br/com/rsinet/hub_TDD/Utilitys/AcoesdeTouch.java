@@ -32,4 +32,11 @@ public class AcoesdeTouch {
 	public static void Scroll() {
 		actions.press(PointOption.point(405, 1031)).moveTo(PointOption.point(426, 335)).release().perform();
 	}
+
+	public static void scrollAndClick(AndroidDriver driver, String visibleText) {
+		driver.findElementByAndroidUIAutomator(
+				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
+						+ visibleText + "\").instance(0))")
+				.click();
+	}
 }

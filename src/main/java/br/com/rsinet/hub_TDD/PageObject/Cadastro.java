@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.rsinet.hub_TDD.Utilitys.AcoesdeTouch;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Cadastro {
@@ -81,8 +82,8 @@ public class Cadastro {
 
 	private WebElement txt_Tel(AndroidDriver<WebElement> driver) {
 
-		return driver.findElement(By.xpath(
-				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.EditText"));
+		return driver.findElement(
+				By.xpath("//*[@resource-id='com.Advantage.aShopping:id/AosEditTextPhoneNumber']/child::*[1]"));
 	}
 
 	private WebElement txt_Estado(AndroidDriver<WebElement> driver) {
@@ -170,6 +171,7 @@ public class Cadastro {
 	public void digitarUltimoNome(String ultimoNome) {
 		txt_UltimoNome(driver).click();
 		txt_UltimoNome(driver).sendKeys(ultimoNome);
+		AcoesdeTouch.scrollAndClick(driver, "ZIP");
 	}
 
 	public void digitarTelefone(String telefone) {
@@ -179,10 +181,7 @@ public class Cadastro {
 
 	public void escolherPais() {
 		cmbx_Pais(driver).click();
-	}
-
-	public void pais() {
-		pais(driver).click();
+		AcoesdeTouch.scrollAndClick(driver, "BRAZIL");
 	}
 
 	public void digitarEstado(String estado) {
@@ -203,6 +202,7 @@ public class Cadastro {
 	public void digitarCEP(String cep) {
 		txt_Cep(driver).click();
 		txt_Cep(driver).sendKeys(cep);
+		AcoesdeTouch.scrollAndClick(driver, "REGISTER");
 	}
 
 	public void confirmaCadastro() {
