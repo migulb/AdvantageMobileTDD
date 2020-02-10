@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_TDD.PageObject;
+package br.com.rsinet.hub_TDD.ScreenObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

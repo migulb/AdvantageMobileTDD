@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.hub_TDD.PageObject.Cadastro;
 import br.com.rsinet.hub_TDD.Report.Reports;
+import br.com.rsinet.hub_TDD.ScreenObject.Cadastro;
 import br.com.rsinet.hub_TDD.Utilitys.AcoesdeTouch;
 import br.com.rsinet.hub_TDD.Utilitys.DriverFactory;
 import br.com.rsinet.hub_TDD.Utilitys.MassaDados;
@@ -108,7 +108,6 @@ public class TestCadastro {
 		cad.apertarMenuAposCadastro();
 		String login = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
 		Assert.assertTrue(login.contains("LOGIN"));
-
 	}
 
 	@AfterMethod

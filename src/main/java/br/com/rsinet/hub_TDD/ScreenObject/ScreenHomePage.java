@@ -1,15 +1,15 @@
-package br.com.rsinet.hub_TDD.PageObject;
+package br.com.rsinet.hub_TDD.ScreenObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class PaginaInicialPage {
+public class ScreenHomePage {
 
 	private static AndroidDriver<WebElement> driver;
 
-	public PaginaInicialPage(AndroidDriver<WebElement> driver) {
+	public ScreenHomePage(AndroidDriver<WebElement> driver) {
 
 		this.driver = driver;
 	}

@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.hub_TDD.PageObject.PaginaInicialPage;
 import br.com.rsinet.hub_TDD.Report.Reports;
+import br.com.rsinet.hub_TDD.ScreenObject.ScreenHomePage;
 import br.com.rsinet.hub_TDD.Utilitys.DriverFactory;
 import br.com.rsinet.hub_TDD.Utilitys.MassaDados;
 import io.appium.java_client.android.AndroidDriver;
@@ -25,7 +25,7 @@ public class PaginaInicial {
 	private static AndroidDriver driver;
 	private static ExtentReports extent;
 	private static ExtentTest logger;
-	private static PaginaInicialPage prod;
+	private static ScreenHomePage prod;
 	private static MassaDados dados;
 
 	@BeforeTest
@@ -38,7 +38,7 @@ public class PaginaInicial {
 	public void beforeMethod() throws Exception {
 		driver = DriverFactory.AberturaAndroid();
 		dados = new MassaDados(driver);
-		prod = new PaginaInicialPage(driver);
+		prod = new ScreenHomePage(driver);
 	}
 
 	@Test

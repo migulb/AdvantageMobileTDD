@@ -16,8 +16,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.hub_TDD.PageObject.BuscaPelaLupa;
 import br.com.rsinet.hub_TDD.Report.Reports;
+import br.com.rsinet.hub_TDD.ScreenObject.BuscaPelaLupa;
 import br.com.rsinet.hub_TDD.Utilitys.DriverFactory;
 import io.appium.java_client.android.AndroidDriver;
 
