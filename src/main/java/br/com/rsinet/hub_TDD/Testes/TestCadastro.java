@@ -107,7 +107,6 @@ public class TestCadastro {
 
 		cad.apertarMenuAposCadastro();
 		String login = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
-		System.out.println(login);
 		Assert.assertTrue(login.contains("LOGIN"));
 
 	}
