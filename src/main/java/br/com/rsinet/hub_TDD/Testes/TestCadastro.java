@@ -40,7 +40,7 @@ public class TestCadastro {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() throws Exception {
+	public void InicioTeste() throws Exception {
 		driver = DriverFactory.AberturaAndroid();
 		funt = new AcoesdeTouch(driver);
 		dados = new MassaDados(driver);
@@ -111,7 +111,7 @@ public class TestCadastro {
 	}
 
 	@AfterMethod
-	public void afterMethod(ITestResult result) throws IOException {
+	public void finalizaTeste(ITestResult result) throws IOException {
 		Reports.statusReported(logger, result, driver);
 		DriverFactory.fecharDriver();
 	}

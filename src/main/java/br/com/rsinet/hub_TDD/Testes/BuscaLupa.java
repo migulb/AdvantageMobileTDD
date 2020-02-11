@@ -35,7 +35,7 @@ public class BuscaLupa {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() throws InterruptedException, MalformedURLException {
+	public void inicializaTest() throws InterruptedException, MalformedURLException {
 		driver = DriverFactory.AberturaAndroid();
 		busca = new BuscaPelaLupa(driver);
 	}
@@ -63,7 +63,7 @@ public class BuscaLupa {
 	}
 
 	@AfterMethod
-	public void afterMethod(ITestResult result) throws IOException {
+	public void finalizaTest(ITestResult result) throws IOException {
 		Reports.statusReported(logger, result, driver);
 		DriverFactory.fecharDriver();
 	}

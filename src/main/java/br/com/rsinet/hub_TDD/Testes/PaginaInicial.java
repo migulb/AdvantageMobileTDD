@@ -35,7 +35,7 @@ public class PaginaInicial {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() throws Exception {
+	public void inicializaTest() throws Exception {
 		driver = DriverFactory.AberturaAndroid();
 		dados = new MassaDados(driver);
 		prod = new ScreenHomePage(driver);
@@ -73,7 +73,7 @@ public class PaginaInicial {
 	}
 
 	@AfterMethod
-	public void afterMethod(ITestResult result) throws IOException {
+	public void finalizaTest(ITestResult result) throws IOException {
 		Reports.statusReported(logger, result, driver);
 		DriverFactory.fecharDriver();
 	}
