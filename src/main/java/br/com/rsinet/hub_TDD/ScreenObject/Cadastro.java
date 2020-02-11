@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_TDD.ScreenObject;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,11 +15,13 @@ public class Cadastro {
 	private static WebDriverWait wait;
 	private static AndroidDriver<WebElement> driver;
 	private static WebElement element = null;
+	private AcoesdeTouch scroll;
 
 	public Cadastro(AndroidDriver<WebElement> driver) {
 
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 10);
+		scroll = new AcoesdeTouch(driver);
 	}
 
 	private WebElement btn_Menu(AndroidDriver<WebElement> driver) {
@@ -199,14 +203,14 @@ public class Cadastro {
 		txt_Cidade(driver).sendKeys(cidade);
 	}
 
-	public void digitarCEP(String cep) {
+	public void digitarCEP(String cep) throws MalformedURLException {
 		txt_Cep(driver).click();
 		txt_Cep(driver).sendKeys(cep);
-		AcoesdeTouch.scrollAndClick(driver, "REGISTER");
+		scroll.scrollar(0.8, 0.2);
 	}
 
 	public void confirmaCadastro() {
-
+		wait.until(ExpectedConditions.elementToBeClickable(btn_Confirma(driver)));
 		btn_Confirma(driver).click();
 	}
 

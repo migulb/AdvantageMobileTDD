@@ -71,7 +71,7 @@ public class TestCadastro {
 		cad.digitarEndereco(dados.Endereco());
 		cad.digitarCidade(dados.Cidade());
 		cad.digitarCEP(dados.CEP());
-
+		cad.confirmaCadastro();
 		cad.apertarMenuAposCadastro();
 
 		String cadastro = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
@@ -104,6 +104,7 @@ public class TestCadastro {
 		cad.digitarEndereco(dados.Endereco());
 		cad.digitarCidade(dados.Cidade());
 		cad.digitarCEP(dados.CEP());
+		cad.confirmaCadastro();
 
 		cad.apertarMenuAposCadastro();
 		String login = driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();

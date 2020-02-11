@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_TDD.Testes.PaginaInicial">
+      <class name="br.com.rsinet.hub_TDD.Testes.TestCadastro">
         <methods>
-          <include name="afterMethod"/>
-          <include name="PaginaInicial2"/>
+          <include name="Cadastro1"/>
+          <include name="finalizaReport"/>
+          <include name="InicioTeste"/>
+          <include name="finalizaTeste"/>
           <include name="IniciaReport"/>
-          <include name="beforeMethod"/>
+          <include name="Cadastro2"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_TDD.Testes.PaginaInicial -->
+      </class> <!-- br.com.rsinet.hub_TDD.Testes.TestCadastro -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
